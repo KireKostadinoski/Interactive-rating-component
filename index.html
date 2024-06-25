@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Interactive rating component</title>
+</head>
+<body>
+    <div class="bg-black h-screen w-full flex justify-center items-center flex-col">
+        <div class="rating-container bg-gradient-to-t from-VeryDarkBlue to-DarkBlue w-[95%] xl:w-[22%] lg:w-[50%] md:w-[50%] p-7 rounded-3xl flex flex-col justify-start space-y-6">
+            <div class="bg-gray-700 w-10 h-10 flex justify-center items-center rounded-full">
+                <img src="./images/icon-star.svg" alt="Star Icon">
+            </div>
+            <div class="flex justify-start items-start flex-col space-y-2">
+                <h1 class="text-White font-sans text-2xl">How did we do?</h1>
+                <p class="text-gray-500 text-sm font-sans">Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
+            </div>
+            <div class="flex flex-row justify-between items-center">
+                <div id="rating1" class="rating bg-gray-700  text-gray-400 font-bold w-10 h-10 flex justify-center items-center rounded-full cursor-pointer duration-75">1</div>
+                <div id="rating2" class="rating bg-gray-700  text-gray-400 font-bold w-10 h-10 flex justify-center items-center rounded-full cursor-pointer duration-75">2</div>
+                <div id="rating3" class="rating bg-gray-700  text-gray-400 font-bold w-10 h-10 flex justify-center items-center rounded-full cursor-pointer duration-75">3</div>
+                <div id="rating4" class="rating bg-gray-700  text-gray-400 font-bold w-10 h-10 flex justify-center items-center rounded-full cursor-pointer duration-75">4</div>
+                <div id="rating5" class="rating bg-gray-700  text-gray-400 font-bold w-10 h-10 flex justify-center items-center rounded-full cursor-pointer duration-75">5</div>
+            </div>
+            <div id="submitBtn" class="bg-Orange font-extrabold text-sm w-full px-10 py-3 cursor-pointer rounded-3xl flex justify-center items-center tracking-wider hover:bg-White hover:text-VeryDarkBlue duration-200">
+                SUBMIT
+            </div>
+        </div>
+
+        <div id="thankYouContainer" class="thank-you-container w-[95%] xl:w-[22%] lg:w-[50%] md:w-[50%] justify-center flex-col items-center p-7 bg-gradient-to-t from-VeryDarkBlue to-DarkBlue rounded-2xl space-y-6 hidden">
+            <div class="flex justify-center items-center flex-col space-y-4">
+                <img src="./images/illustration-thank-you.svg" alt="Thank you illustration">
+                <div class="flex justify-center items-center bg-gray-700 py-1 px-4 rounded-2xl">
+                    <p class="text-Orange">You selected <span id="selected">4</span> out of 5</p>
+                </div>
+            </div>
+            <div class="flex justify-center items-center flex-col">
+                <h1 class="text-White font-sans text-xl">Thank you!</h1>
+                <p class="text-gray-500 text-sm font-sans text-center">We appreciate you taking time to give a rating. If you ever need more support, don’t hesitate to get in touch!</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
